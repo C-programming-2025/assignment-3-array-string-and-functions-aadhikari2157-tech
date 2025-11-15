@@ -1,1 +1,16 @@
-// Write a function named calculateGCD that takes two integers as input and returns their greatest common divisor (GCD).
+#include <stdio.h>
+int main() {
+    int a, b;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+
+    int x = a, y = b;
+    while(y != 0) {
+        int temp = y;
+        y = x % y;
+        x = temp;
+    }
+
+    printf("GCD = %d", x);
+    return 0;
+}
