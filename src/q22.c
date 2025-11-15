@@ -1,1 +1,21 @@
-// Write a recursive function named calculateFibonacci that takes an integer n as input and returns the nth Fibonacci number. The Fibonacci sequence starts with 0 and 1, and each subsequent number is the sum of the two preceding numbers.
+#include <stdio.h>
+int main() {
+    int n;
+    printf("Enter n: ");
+    scanf("%d", &n);
+
+    int a = 0, b = 1, next;
+    if(n == 1) printf("0");
+    else if(n == 2) printf("0 1");
+    else {
+        printf("0 1 ");
+        for(int i = 3; i <= n; i++) {
+            next = a + b;
+            printf("%d ", next);
+            a = b;
+            b = next;
+        }
+    }
+
+    return 0;
+}
