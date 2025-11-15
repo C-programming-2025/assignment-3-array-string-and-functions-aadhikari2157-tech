@@ -1,1 +1,15 @@
-// Write a recursive function named calculateGCD that takes two integers a and b as input and returns their greatest common divisor (GCD).
+#include <stdio.h>
+int main() {
+    int a, b;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+
+    int gcd = 1;
+    for(int i = 1; i <= a && i <= b; i++) {
+        if(a % i == 0 && b % i == 0)
+            gcd = i;
+    }
+
+    printf("GCD = %d", gcd);
+    return 0;
+}
